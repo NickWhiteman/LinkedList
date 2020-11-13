@@ -1,0 +1,39 @@
+﻿<Properties StartupConfiguration="{323F89CE-3480-427F-A140-3C7961A13438}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LinkedList.Test/UnitTest1.cs">
+    <Files>
+      <File FileName="LinkedList/Class1.cs" Line="154" Column="17" />
+      <File FileName="LinkedList.Test/UnitTest1.cs" Line="22" Column="1" />
+      <File FileName="LinkedList/Node.cs" Line="2" Column="18" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="LinkedList" expanded="True">
+            <Node name="LinkedList" expanded="True" />
+            <Node name="LinkedList.Test" expanded="True">
+              <Node name="UnitTest1.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="LinkedList" expanded="True">
+            <Node name="LinkedList.Test" expanded="True">
+              <Node name="LinkedList.Test" expanded="True" selected="True">
+                <Node name="Tests" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.LinkedList.Test PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

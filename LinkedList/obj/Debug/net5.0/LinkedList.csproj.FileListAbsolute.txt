@@ -1,0 +1,12 @@
+/Users/nikitaromanov/Projects/LinkedList/LinkedList/bin/Debug/net5.0/LinkedList.deps.json
+/Users/nikitaromanov/Projects/LinkedList/LinkedList/bin/Debug/net5.0/LinkedList.dll
+/Users/nikitaromanov/Projects/LinkedList/LinkedList/bin/Debug/net5.0/ref/LinkedList.dll
+/Users/nikitaromanov/Projects/LinkedList/LinkedList/bin/Debug/net5.0/LinkedList.pdb
+/Users/nikitaromanov/Projects/LinkedList/LinkedList/obj/Debug/net5.0/LinkedList.csprojAssemblyReference.cache
+/Users/nikitaromanov/Projects/LinkedList/LinkedList/obj/Debug/net5.0/LinkedList.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nikitaromanov/Projects/LinkedList/LinkedList/obj/Debug/net5.0/LinkedList.AssemblyInfoInputs.cache
+/Users/nikitaromanov/Projects/LinkedList/LinkedList/obj/Debug/net5.0/LinkedList.AssemblyInfo.cs
+/Users/nikitaromanov/Projects/LinkedList/LinkedList/obj/Debug/net5.0/LinkedList.csproj.CoreCompileInputs.cache
+/Users/nikitaromanov/Projects/LinkedList/LinkedList/obj/Debug/net5.0/LinkedList.dll
+/Users/nikitaromanov/Projects/LinkedList/LinkedList/obj/Debug/net5.0/ref/LinkedList.dll
+/Users/nikitaromanov/Projects/LinkedList/LinkedList/obj/Debug/net5.0/LinkedList.pdb
