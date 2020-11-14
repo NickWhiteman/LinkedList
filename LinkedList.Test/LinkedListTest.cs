@@ -1,5 +1,5 @@
 using NUnit.Framework;
-using LinkedList;
+using LinkedList; 
 
 namespace LinkedList.Test
 {
@@ -114,25 +114,99 @@ namespace LinkedList.Test
         //}
 
 
-        [TestCase(new int[] { 1, 2, 3 }, new int[] { 3, 2, 1 })]
-        [TestCase(new int[] { 1, 2, 3, 4, 5 }, new int[] { 5, 4, 3, 2, 1 })]
-        [TestCase(new int[] { 3, 2, 1 }, new int[] { 1, 2, 3 })]
-        [TestCase(new int[] { 1, 2 }, new int[] { 2, 1 })]
-        [TestCase(new int[] { 1 }, new int[] { 1 })]
-        public void Reverse(int[] array, int[] expArray)
+        //[TestCase(new int[] { 1, 2, 3 }, new int[] { 3, 2, 1 })]
+        //[TestCase(new int[] { 1, 2, 3, 4, 5 }, new int[] { 5, 4, 3, 2, 1 })]
+        //[TestCase(new int[] { 3, 2, 1 }, new int[] { 1, 2, 3 })]
+        //[TestCase(new int[] { 1, 2 }, new int[] { 2, 1 })]
+        //[TestCase(new int[] { 1 }, new int[] { 1 })]
+        //public void Reverse(int[] array, int[] expArray)
+        //{
+        //    LinkedList expected = new LinkedList(expArray);
+        //    LinkedList actual = new LinkedList(array);
+
+        //    actual.Reverse();
+
+        //    Assert.AreEqual(expected, actual);
+        //}
+
+
+        //[TestCase(new int[] { 1, 2, 3 }, 1, 5, new int[] { 1, 5, 3 })]
+        //[TestCase(new int[] { 1, 2, 3, 4, 5 }, 0, 4, new int[] { 4, 2, 3, 4, 5 })]
+        //[TestCase(new int[] { 1, 2, 3 }, 2, 8, new int[] { 1, 2, 8 })]
+        //[TestCase(new int[] { 1, 2, 3 }, 1, 10, new int[] { 1, 10, 3 })]
+        //[TestCase(new int[] { 1 }, 0, 2, new int[] { 2 })]
+        //public void ChangeIndex(int[] array, int index, int value, int[] expArray)
+        //{
+        //    LinkedList expected = new LinkedList(expArray);
+        //    LinkedList actual = new LinkedList(array);
+
+        //    actual.ChangeIndex(index, value);
+
+        //    Assert.AreEqual(expected, actual);
+        //}
+
+
+        //[TestCase(new int[] { 1, 2, 3 }, 3)]
+        //[TestCase(new int[] { 1, 2, 3, 4, 5 }, 5)]
+        //[TestCase(new int[] { 1, 43, 99, 35, 23 }, 99)]
+        //[TestCase(new int[] { 23, -12, -84, 34, 54 }, 54)]
+        //[TestCase(new int[] { -23, -45, -12, -1, 0 }, 0)]
+        //public void GetMaxItem(int[] array, int expMax)
+        //{
+        //    int expected = expMax;
+        //    LinkedList actual = new LinkedList(array);
+
+        //    int result = actual.GetMaxItem();
+
+        //    Assert.AreEqual(expected, result);
+        //}
+
+
+        //[TestCase(new int[] { 1, 2, 3 }, 1)]
+        //[TestCase(new int[] { 1, 2, 3, 4, 5 }, 1)]
+        //[TestCase(new int[] { 1, 43, 99, 35, 23 }, 1)]
+        //[TestCase(new int[] { 23, -12, -84, 34, 54 }, -84)]
+        //[TestCase(new int[] { -23, -45, -12, -1, 0 }, -45)]
+        //public void GetMinItem(int[] array, int expMin)
+        //{
+        //    int expected = expMin;
+        //    LinkedList actual = new LinkedList(array);
+
+        //    int result = actual.GetMinItem();
+
+        //    Assert.AreEqual(expected, result);
+        //}
+
+
+        [TestCase(new int[] { 1, 2, 3 }, 2)]
+        [TestCase(new int[] { 1, 2, 3, 4, 5 }, 4)]
+        [TestCase(new int[] { 1, 43, 99, 35, 23 }, 2)]
+        [TestCase(new int[] { 23, -12, -84, 34, 54 }, 4)]
+        [TestCase(new int[] { -23, -45, -12, -1, 0 }, 4)]
+        public void GetIndexMaxItem(int[] array, int expMax)
         {
-            LinkedList expected = new LinkedList(expArray);
+            int expected = expMax;
             LinkedList actual = new LinkedList(array);
 
-            actual.Reverse();
+            int result = actual.GetIndexMaxItem();
 
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, result);
         }
 
 
+        [TestCase(new int[] { 1, 2, 3 }, 0)]
+        [TestCase(new int[] { 1, 2, 3, 4, 5 }, 0)]
+        [TestCase(new int[] { 1, 43, 99, 35, 23 }, 0)]
+        [TestCase(new int[] { 23, -12, -84, 34, 54 }, 2)]
+        [TestCase(new int[] { -23, -45, -12, -1, 0 }, 1)]
+        public void GetIndexMinItem(int[] array, int expMin)
+        {
+            int expected = expMin;
+            LinkedList actual = new LinkedList(array);
 
+            int result = actual.GetIndexMinItem();
 
-
-
+            Assert.AreEqual(expected, result);
+        }
     }
 }

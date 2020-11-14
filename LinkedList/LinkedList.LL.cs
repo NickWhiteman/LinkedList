@@ -229,7 +229,7 @@ namespace LinkedList
             return count;
         }
 
-
+        //Реверс
         public void Reverse()
         {
             Node current = _root;
@@ -243,11 +243,98 @@ namespace LinkedList
                 current = nextCurrent;
             }
             _root = prev;
+        }
 
 
+        //Метод изменения по индексу
+        public void ChangeIndex(int index, int value)
+        {
+            Node current = _root;
+
+            for (int i = 0; i < index; i++)
+            {
+                current = current.Next;
+            }
+
+            current.Value = value; 
+        }
 
 
+        //Поиск наибольшего элемента
+        public int GetMaxItem()
+        {
+            Node current = _root;
+            int maxItem = current.Value;
 
+            while (current.Next != null)
+            {
+                current = current.Next;
+                if(current.Value > maxItem)
+                {
+                    maxItem = current.Value;
+                }
+            }
+
+            return maxItem;
+        }
+
+        //Поиск наименьшего элемента
+        public int GetMinItem()
+        {
+            Node current = _root;
+            int minItem = current.Value;
+
+            while (current.Next != null)
+            {
+                current = current.Next;
+                if (current.Value < minItem)
+                {
+                    minItem = current.Value;
+                }
+            }
+
+            return minItem;
+        }
+
+
+        //Поиск index наибольшего элемента
+        public int GetIndexMaxItem()
+        {
+            Node current = _root;
+            int maxItem = current.Value;
+            int maxIndex = 0;
+
+            for (int i = 1; i < Length; i++)
+            {
+                current = current.Next;
+                if (current.Value > maxItem)
+                {
+                    maxItem = current.Value;
+                    maxIndex = i;
+                }
+            }
+
+            return maxIndex;
+        }
+
+        //Поиск index наименьшего элемента
+        public int GetIndexMinItem()
+        {
+            Node current = _root;
+            int minItem = current.Value;
+            int minIndex = 0;
+
+            for (int i = 1; i < Length; i++)
+            {
+                current = current.Next;
+                if (current.Value < minItem)
+                {
+                    minItem = current.Value;
+                    minIndex = i;
+                }    
+            }
+
+            return minIndex;
         }
 
     }

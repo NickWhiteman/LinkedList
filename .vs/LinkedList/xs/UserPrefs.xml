@@ -1,25 +1,31 @@
 ﻿<Properties StartupConfiguration="{323F89CE-3480-427F-A140-3C7961A13438}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="LinkedList/LinkedList.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Console1LL/Program.cs">
     <Files>
-      <File FileName="LinkedList/LinkedList.cs" Line="241" Column="37" />
-      <File FileName="LinkedList.Test/LinkedListTest.cs" />
-      <File FileName="Console1LL/Program.cs" />
+      <File FileName="LinkedList/LinkedList.cs" Line="275" Column="18" />
+      <File FileName="LinkedList.Test/LinkedListTest.cs" Line="162" Column="10" />
+      <File FileName="Console1LL/Program.cs" Line="2" Column="11" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="LinkedList" expanded="True">
-            <Node name="Console1LL" expanded="True" />
-            <Node name="LinkedList" expanded="True">
-              <Node name="LinkedList.cs" selected="True" />
+            <Node name="Console1LL" expanded="True">
+              <Node name="Program.cs" selected="True" />
             </Node>
+            <Node name="LinkedList" expanded="True" />
             <Node name="LinkedList.Test" expanded="True" />
           </Node>
         </State>
       </Pad>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
-          <Node name="LinkedList" expanded="True" selected="True" />
+          <Node name="LinkedList" expanded="True">
+            <Node name="LinkedList.Test" expanded="True">
+              <Node name="LinkedList.Test" expanded="True">
+                <Node name="Tests" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
@@ -28,7 +34,9 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/nikitaromanov/Projects/LinkedList/Console1LL/Program.cs" relfile="Console1LL/Program.cs" line="10" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
