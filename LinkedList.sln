@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList", "LinkedList\Li
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList.Test", "LinkedList.Test\LinkedList.Test.csproj", "{323F89CE-3480-427F-A140-3C7961A13438}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console1LL", "Console1LL\Console1LL.csproj", "{CFECC6D3-6A5B-41DD-9345-9749C8335DD8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{323F89CE-3480-427F-A140-3C7961A13438}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{323F89CE-3480-427F-A140-3C7961A13438}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{323F89CE-3480-427F-A140-3C7961A13438}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFECC6D3-6A5B-41DD-9345-9749C8335DD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFECC6D3-6A5B-41DD-9345-9749C8335DD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFECC6D3-6A5B-41DD-9345-9749C8335DD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFECC6D3-6A5B-41DD-9345-9749C8335DD8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

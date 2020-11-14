@@ -166,8 +166,96 @@ namespace LinkedList
             }
             Length++;
         }
+
+
+        //Метод добавления значения в начало
+        public void AddByStart(int value)
+        {
+            AddByIndex(0, value);
         }
 
+        //Метод удаления значения с конца
+        public void RemoveByEnd()
+        {
+            Node current = _root;
+            for (int i = 1; i < Length; i++)
+            {
+                current = current.Next; 
+            }
+
+            current.Next = null;
+            Length--;
+        }
+
+        //Метод удаления элемента из начала
+        public void RemoveByStart()
+        {
+            Node tmp = _root;
+            _root = tmp.Next;
+            Length--;
+        }
+
+        //Метод удаленя элемента по индексу
+        public void RemoveByIndex(int index)
+        {
+            if (index == 0)
+            {
+                Node tmp = _root;
+                _root = tmp.Next;
+            }
+            else
+            {
+                Node current = _root;
+                for (int i = 1; i < index; i++)
+                {
+                    current = current.Next;
+                }
+                
+                current.Next = current.Next.Next;
+            }
+            Length--;
+        }
+
+        //Метод возвращает длину
+        public int GetLength()
+        {
+            int count = 0;
+            Node current = _root;
+            for (int i = 0; i < Length; i++)
+            {
+                current = current.Next;
+                count++;
+            }
+            return count;
+        }
+
+
+        public void Reverse()
+        {
+            Node current = _root;
+            Node nextCurrent = null;
+            Node prev = null;
+            while(current != null)
+            {
+                nextCurrent = current.Next;
+                current.Next = prev;
+                prev = current;
+                current = nextCurrent;
+            }
+            _root = prev;   // либо nextCurrent, либо prev
+
+            //Node current = _root;
+            //Node prev = null;
+            //while (current != null)
+            //{
+            //    prev = current.Next;
+            //    Node tmp = current.Next;
+            //    current.Next = prev;
+            //    prev = current;
+            //    current = tmp;
+            //}
+            //_root = prev;
+        }
 
     }
 }

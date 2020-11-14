@@ -1,0 +1,88 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "LinkedList/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/LinkedList.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LinkedList.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LinkedList/1.0.0": {
+      "type": "project",
+      "path": "../LinkedList/LinkedList.csproj",
+      "msbuildProject": "../LinkedList/LinkedList.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "LinkedList >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/nikitaromanov/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/nikitaromanov/Projects/LinkedList/Console1LL/Console1LL.csproj",
+      "projectName": "Console1LL",
+      "projectPath": "/Users/nikitaromanov/Projects/LinkedList/Console1LL/Console1LL.csproj",
+      "packagesPath": "/Users/nikitaromanov/.nuget/packages/",
+      "outputPath": "/Users/nikitaromanov/Projects/LinkedList/Console1LL/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/nikitaromanov/.config/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {
+            "/Users/nikitaromanov/Projects/LinkedList/LinkedList/LinkedList.csproj": {
+              "projectPath": "/Users/nikitaromanov/Projects/LinkedList/LinkedList/LinkedList.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
