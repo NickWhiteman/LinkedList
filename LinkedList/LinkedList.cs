@@ -242,19 +242,12 @@ namespace LinkedList
                 prev = current;
                 current = nextCurrent;
             }
-            _root = prev;   // либо nextCurrent, либо prev
+            _root = prev;
 
-            //Node current = _root;
-            //Node prev = null;
-            //while (current != null)
-            //{
-            //    prev = current.Next;
-            //    Node tmp = current.Next;
-            //    current.Next = prev;
-            //    prev = current;
-            //    current = tmp;
-            //}
-            //_root = prev;
+
+
+
+
         }
 
     }
