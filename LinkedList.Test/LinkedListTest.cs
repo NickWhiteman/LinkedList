@@ -82,6 +82,10 @@ namespace LinkedList.Test
         //}
 
 
+        //[TestCase(new int[] { 2, 6, 1, 5, 0 }, 2, new int[] { 2, 6, 5, 0 })]
+        //[TestCase(new int[] { 1, 43, 35, 99, 23 }, 4, new int[] { 1, 43, 35, 99 })]
+        //[TestCase(new int[] { 23, -12, -84, 34, 54 }, 1, new int[] { 23, -84, 34, 54 })]
+        //[TestCase(new int[] { -23, -12, -45, -1, 0 }, 3, new int[] { -23, -12, -45, 0 })]
         //[TestCase(new int[] { 1, 2, 3 }, 1, new int[] { 1, 3 })]
         //[TestCase(new int[] { 1, 2, 3, 4, 5 }, 3, new int[] { 1, 2, 3, 5 })]
         //[TestCase(new int[] { 1, 2, 3 }, 0, new int[] { 2, 3 })]
@@ -178,35 +182,103 @@ namespace LinkedList.Test
         //}
 
 
-        [TestCase(new int[] { 1, 2, 3 }, 2)]
-        [TestCase(new int[] { 1, 2, 3, 4, 5 }, 4)]
-        [TestCase(new int[] { 1, 43, 99, 35, 23 }, 2)]
-        [TestCase(new int[] { 23, -12, -84, 34, 54 }, 4)]
-        [TestCase(new int[] { -23, -45, -12, -1, 0 }, 4)]
-        public void GetIndexMaxItem(int[] array, int expMax)
+        //[TestCase(new int[] { 1, 2, 3 }, 2)]
+        //[TestCase(new int[] { 1, 2, 3, 4, 5 }, 4)]
+        //[TestCase(new int[] { 1, 43, 99, 35, 23 }, 2)]
+        //[TestCase(new int[] { 23, -12, -84, 34, 54 }, 4)]
+        //[TestCase(new int[] { -23, -45, -12, -1, 0 }, 4)]
+        //public void GetIndexMaxItem(int[] array, int expMax)
+        //{
+        //    int expected = expMax;
+        //    LinkedList actual = new LinkedList(array);
+
+        //    int result = actual.GetIndexMaxItem();
+
+        //    Assert.AreEqual(expected, result);
+        //}
+
+
+        //[TestCase(new int[] { 1, 2, 3 }, 0)]
+        //[TestCase(new int[] { 1, 2, 3, 4, 5 }, 0)]
+        //[TestCase(new int[] { 1, 43, 99, 35, 23 }, 0)]
+        //[TestCase(new int[] { 23, -12, -84, 34, 54 }, 2)]
+        //[TestCase(new int[] { -23, -45, -12, -1, 0 }, 1)]
+        //public void GetIndexMinItem(int[] array, int expMin)
+        //{
+        //    int expected = expMin;
+        //    LinkedList actual = new LinkedList(array);
+
+        //    int result = actual.GetIndexMinItem();
+
+        //    Assert.AreEqual(expected, result);
+        //}
+
+
+        //[TestCase(new int[] { 2, 3, 1 }, new int[] { 1, 2, 3 })]
+        //[TestCase(new int[] { 2, 6, 1, 5, 0 }, new int[] { 0, 1, 2, 5, 6 })]
+        //[TestCase(new int[] { 1, 43, 99, 35, 23 }, new int[] { 1, 23, 35, 43, 99 })]
+        //[TestCase(new int[] { 23, -12, -84, 34, 54 }, new int[] { -84, -12, 23, 34, 54 })]
+        //[TestCase(new int[] { -23, -12, -45, -1, 0 }, new int[] { -45, -23, -12, -1, 0 })]
+        //public void SortLayout(int[] array, int[] expArr)
+        //{
+        //    LinkedList expected = new LinkedList(expArr);
+        //    LinkedList actual = new LinkedList(array);
+
+        //    actual.SortLayout();
+
+        //    Assert.AreEqual(expected, actual);
+        //}
+
+
+        [TestCase(new int[] { 1, 2, 3 }, 2, new int[] { 1, 3 })]
+        [TestCase(new int[] { 2, 6, 1, 5, 0 }, 5, new int[] { 2, 6, 1, 0 })]
+        [TestCase(new int[] { 1, 43, 35, 99, 23 }, 99, new int[] { 1, 43, 35, 23 })]
+        [TestCase(new int[] { 23, -12, -84, 34, 54 }, -12, new int[] { 23, -84, 34, 54 })]
+        [TestCase(new int[] { -23, -12, -45, -1, 0 }, 0, new int[] { -23, -12, -45, -1 })]
+        public void RemoveItemFirstValue(int[] array, int value, int[] expArray)
         {
-            int expected = expMax;
+            LinkedList expected = new LinkedList(expArray);
             LinkedList actual = new LinkedList(array);
 
-            int result = actual.GetIndexMaxItem();
+            actual.RemoveItemFirstValue(value);
 
-            Assert.AreEqual(expected, result);
+            Assert.AreEqual(expected, actual);
         }
 
 
-        [TestCase(new int[] { 1, 2, 3 }, 0)]
-        [TestCase(new int[] { 1, 2, 3, 4, 5 }, 0)]
-        [TestCase(new int[] { 1, 43, 99, 35, 23 }, 0)]
-        [TestCase(new int[] { 23, -12, -84, 34, 54 }, 2)]
-        [TestCase(new int[] { -23, -45, -12, -1, 0 }, 1)]
-        public void GetIndexMinItem(int[] array, int expMin)
+        //[TestCase(new int[] { 1, 2, 3 }, 2, 1)]
+        //[TestCase(new int[] { 2, 6, 1, 5, 0 }, 5, 3)]
+        //[TestCase(new int[] { 1, 43, 35, 99, 23 }, 99, 3)]
+        //[TestCase(new int[] { 23, -12, -84, 34, 54 }, -12, 1)]
+        //[TestCase(new int[] { -23, -12, -45, -1, 0 }, 0, 4)]
+        //public void GetIndexByValue(int[] array, int value, int expArr)
+        //{
+        //    int expected = expArr;
+        //    LinkedList actual = new LinkedList(array);
+
+        //    int result = actual.GetIndexByValue(value);
+
+        //    Assert.AreEqual(expected, result);
+        //}
+
+
+
+        [TestCase(new int[] { 1, 2, 2 }, 2, new int[] { 1 })]
+        [TestCase(new int[] { 2, 6, 1, 6, 0 }, 6, new int[] { 2, 1, 0 })]
+        [TestCase(new int[] { 1, 99, 35, 99, 23 }, 99, new int[] { 1, 35, 23 })]
+        [TestCase(new int[] { 23, -12, -84, 34, -12 }, -12, new int[] { 23, -84, 34 })]
+        [TestCase(new int[] { 0, -12, -45, -1, 0 }, 0, new int[] { -12, -45, -1 })]
+        public void RemoveItemByValueAll(int[] array, int value, int[] expArray)
         {
-            int expected = expMin;
+            LinkedList expected = new LinkedList(expArray);
             LinkedList actual = new LinkedList(array);
 
-            int result = actual.GetIndexMinItem();
+            actual.RemoveItemByValueAll(value);
 
-            Assert.AreEqual(expected, result);
+            Assert.AreEqual(expected, actual);
         }
+
+
+
     }
 }

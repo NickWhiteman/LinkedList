@@ -221,7 +221,7 @@ namespace LinkedList
         {
             int count = 0;
             Node current = _root;
-            for (int i = 0; i < Length; i++)
+            for (int i = 1; i <= Length; i++)
             {
                 current = current.Next;
                 count++;
@@ -324,7 +324,7 @@ namespace LinkedList
             int minItem = current.Value;
             int minIndex = 0;
 
-            for (int i = 1; i < Length; i++)
+            for (int i = 1; i <= Length; i++)
             {
                 current = current.Next;
                 if (current.Value < minItem)
@@ -337,5 +337,83 @@ namespace LinkedList
             return minIndex;
         }
 
+        //Cортировка по возрастанию
+        //public void SortLayout()
+        //{
+        //    if (Length == 0)
+        //    {
+        //        throw new Exception("List empty!");
+        //    }
+        //    else
+        //    {
+        //        Node current = _root;
+        //        Node temp = current.Next;
+        //        _root = temp;
+
+        //        for (int i = 1; i < Length; i++)
+        //        {
+        //            if(current.Value < current.Next.Value)
+        //            {
+                        
+        //            }
+        //            current = current.Next;
+        //        }
+
+        //    }
+
+        //}
+
+
+        //Уделение по значению первого элемента
+        public void RemoveItemFirstValue(int value, int quantity = 1)
+        {   
+            for (int i = 0; i < quantity; i++)
+            {
+                int index = GetIndexByValue(value);
+                RemoveByIndex(index);
+            }
+        }
+
+        //Доступ к индексу по значению
+        public int GetIndexByValue(int value)
+        {
+            Node current = _root;
+            int indx = 0;
+            for (int i = 0; i < Length; i++)
+            {
+                if (current.Value == value)
+                {
+                    indx = i;
+                }
+                current = current.Next;
+            }
+            return indx;
+        }
+
+        //Количестно повторяющихся элементов в списке
+        private int QuantityAgainItem(int value)
+        {
+            int quantity = 0;
+            Node current = _root;
+            for (int i = 0; i < Length; i++)
+            {
+                if (current.Value == value)
+                {
+                    quantity++;
+                }
+                current = current.Next;
+            }
+
+            return quantity;
+        }
+
+
+        //Удаление по значению всех
+        public void RemoveItemByValueAll(int value)
+        {
+           int quantity =  QuantityAgainItem(value);
+           RemoveItemFirstValue(value, quantity);
+        }
+        
     }
 }
