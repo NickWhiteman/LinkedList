@@ -67,6 +67,9 @@ namespace LinkedList
             }
         }
 
+
+
+
         //Метод добавления по индексу
         public void AddByIndex(int index, int value)
         {
@@ -167,7 +170,6 @@ namespace LinkedList
             Length++;
         }
 
-
         //Метод добавления значения в начало
         public void AddByStart(int value)
         {
@@ -245,7 +247,6 @@ namespace LinkedList
             _root = prev;
         }
 
-
         //Метод изменения по индексу
         public void ChangeIndex(int index, int value)
         {
@@ -258,7 +259,6 @@ namespace LinkedList
 
             current.Value = value; 
         }
-
 
         //Поиск наибольшего элемента
         public int GetMaxItem()
@@ -295,7 +295,6 @@ namespace LinkedList
 
             return minItem;
         }
-
 
         //Поиск index наибольшего элемента
         public int GetIndexMaxItem()
@@ -365,6 +364,7 @@ namespace LinkedList
 
 
         //Уделение по значению первого элемента
+
         public void RemoveItemFirstValue(int value, int quantity = 1)
         {   
             for (int i = 0; i < quantity; i++)
@@ -390,6 +390,27 @@ namespace LinkedList
             return indx;
         }
 
+        //Удаление по значению всех
+        public void RemoveItemByValueAll(int value)
+        {
+           int quantity =  QuantityAgainItem(value);
+           RemoveItemFirstValue(value, quantity);
+        }
+
+        //Доступ по индексу
+        public int AccessByIndex(int index)
+        {
+            Node current = _root;
+            for (int i = 1; i <= index; i++)
+            {
+                current = current.Next;
+            }
+
+            return current.Value;
+        }
+
+
+
         //Количестно повторяющихся элементов в списке
         private int QuantityAgainItem(int value)
         {
@@ -408,12 +429,5 @@ namespace LinkedList
         }
 
 
-        //Удаление по значению всех
-        public void RemoveItemByValueAll(int value)
-        {
-           int quantity =  QuantityAgainItem(value);
-           RemoveItemFirstValue(value, quantity);
-        }
-        
     }
 }

@@ -263,22 +263,37 @@ namespace LinkedList.Test
 
 
 
-        [TestCase(new int[] { 1, 2, 2 }, 2, new int[] { 1 })]
-        [TestCase(new int[] { 2, 6, 1, 6, 0 }, 6, new int[] { 2, 1, 0 })]
-        [TestCase(new int[] { 1, 99, 35, 99, 23 }, 99, new int[] { 1, 35, 23 })]
-        [TestCase(new int[] { 23, -12, -84, 34, -12 }, -12, new int[] { 23, -84, 34 })]
-        [TestCase(new int[] { 0, -12, -45, -1, 0 }, 0, new int[] { -12, -45, -1 })]
-        public void RemoveItemByValueAll(int[] array, int value, int[] expArray)
+        //[TestCase(new int[] { 1, 2, 2 }, 2, new int[] { 1 })]
+        //[TestCase(new int[] { 2, 6, 1, 6, 0 }, 6, new int[] { 2, 1, 0 })]
+        //[TestCase(new int[] { 1, 99, 35, 99, 23 }, 99, new int[] { 1, 35, 23 })]
+        //[TestCase(new int[] { 23, -12, -84, 34, -12 }, -12, new int[] { 23, -84, 34 })]
+        //[TestCase(new int[] { 0, -12, -45, -1, 0 }, 0, new int[] { -12, -45, -1 })]
+        //public void RemoveItemByValueAll(int[] array, int value, int[] expArray)
+        //{
+        //    LinkedList expected = new LinkedList(expArray);
+        //    LinkedList actual = new LinkedList(array);
+
+        //    actual.RemoveItemByValueAll(value);
+
+        //    Assert.AreEqual(expected, actual);
+        //}
+
+
+
+        [TestCase(new int[] { 1, 2, 3 }, 2, 3)]
+        [TestCase(new int[] { 2, 6, 1, 6, 0 }, 4, 0)]
+        [TestCase(new int[] { 1, 99, 35, 99, 23 }, 3, 99)]
+        [TestCase(new int[] { 23, -12, -84, 34, -12 }, 3, 34)]
+        [TestCase(new int[] { 0, -12, -45, -1, 0 }, 0, 0)]
+        public void AccessByIndex(int[] array, int index, int exp)
         {
-            LinkedList expected = new LinkedList(expArray);
+            int expected = exp;
             LinkedList actual = new LinkedList(array);
 
-            actual.RemoveItemByValueAll(value);
+            int result = actual.AccessByIndex(index);
 
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, result);
         }
-
-
 
     }
 }

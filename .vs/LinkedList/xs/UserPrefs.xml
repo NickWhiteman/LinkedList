@@ -1,9 +1,8 @@
 ﻿<Properties StartupConfiguration="{323F89CE-3480-427F-A140-3C7961A13438}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="LinkedList/Node.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LinkedList/LinkedList.cs">
     <Files>
-      <File FileName="LinkedList.Test/LinkedListTest.cs" Line="240" Column="1" />
-      <File FileName="LinkedList/LinkedList.cs" Line="378" Column="48" />
-      <File FileName="LinkedList/Node.cs" Line="1" Column="1" />
+      <File FileName="LinkedList/LinkedList.cs" Line="409" Column="34" />
+      <File FileName="LinkedList.Test/LinkedListTest.cs" Line="302" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,7 +10,7 @@
           <Node name="LinkedList" expanded="True">
             <Node name="Console1LL" expanded="True" />
             <Node name="LinkedList" expanded="True">
-              <Node name="Node.cs" selected="True" />
+              <Node name="LinkedList.cs" selected="True" />
             </Node>
             <Node name="LinkedList.Test" expanded="True" />
           </Node>
@@ -19,9 +18,9 @@
       </Pad>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
-          <Node name="LinkedList" expanded="True" selected="True">
+          <Node name="LinkedList" expanded="True">
             <Node name="LinkedList.Test" expanded="True">
-              <Node name="LinkedList.Test" expanded="True">
+              <Node name="LinkedList.Test" expanded="True" selected="True">
                 <Node name="Tests" expanded="True" />
               </Node>
             </Node>
