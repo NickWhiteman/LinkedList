@@ -1,8 +1,7 @@
 ﻿<Properties StartupConfiguration="{323F89CE-3480-427F-A140-3C7961A13438}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="LinkedList/LinkedList.cs">
     <Files>
-      <File FileName="LinkedList/LinkedList.cs" Line="409" Column="34" />
-      <File FileName="LinkedList.Test/LinkedListTest.cs" Line="302" Column="1" />
+      <File FileName="LinkedList/LinkedList.cs" Line="360" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

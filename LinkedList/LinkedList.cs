@@ -36,15 +36,11 @@ namespace LinkedList
             Length = 0;
             _root = null;
         }
-
-
         public LinkedList(int value)
         {
             _root = new Node(value);
             Length = 1;
         }
-
-
         public LinkedList(int[] array)
         {
             if (array.Length != 0)
@@ -364,7 +360,6 @@ namespace LinkedList
 
 
         //Уделение по значению первого элемента
-
         public void RemoveItemFirstValue(int value, int quantity = 1)
         {   
             for (int i = 0; i < quantity; i++)
@@ -409,6 +404,71 @@ namespace LinkedList
             return current.Value;
         }
 
+        //Добавление массива в конец
+        public void AddArrayInEnd(int[] array)
+        {
+            Node current = _root;
+            for (int i = 1; i < Length; i++)
+            {
+                current = current.Next;
+            }
+
+            for (int i = array.Length - 1; i >= 0; i--)
+            {
+                Node tmp = current.Next;
+                current.Next = new Node(array[i]);
+                current.Next.Next = tmp;
+                Length++;
+            }
+        }
+
+        //Добавление массива в начало
+        public void AddArrayInFirst(int[] array)
+        {
+            for (int i = array.Length - 1; i >= 0; i--)
+            {
+                Node tmp = _root;
+                _root = new Node(array[i]);
+                _root.Next = tmp;
+                Length++;
+            }
+        }
+
+        //Добавление массива по индексу
+        public void AddArrayByIndex(int[] array, int index)
+        {
+            for (int i = array.Length - 1; i >= 0; i--)
+            {
+                AddByIndex(index, array[i]);
+            }
+        }
+
+        //Удаление из конца N элементов
+        public void RemoveByEndItems(int quantity)
+        {
+            for (int i = 0; i < quantity; i++)
+            {
+                RemoveByEnd();
+            }
+        }
+
+        //Удаление из начала N элементов
+        public void RemoveByFirstItems(int quantity)
+        {
+            for (int i = 0; i < quantity; i++)
+            {
+                RemoveByStart();
+            }
+        }
+
+        //Удаление по индексу N элементов
+        public void RemovByIndexItems(int index, int quantity)
+        {
+            for (int i = 0; i < quantity; i++)
+            {
+                RemoveByIndex(index);
+            }
+        }
 
 
         //Количестно повторяющихся элементов в списке
@@ -427,6 +487,8 @@ namespace LinkedList
 
             return quantity;
         }
+
+        //Перемещение по списку вперед
 
 
     }
