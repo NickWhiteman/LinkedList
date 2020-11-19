@@ -1,0 +1,43 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/nikitaromanov/Projects/LinkedList/DoubleLinkedList/DoubleLinkedList.csproj": {}
+  },
+  "projects": {
+    "/Users/nikitaromanov/Projects/LinkedList/DoubleLinkedList/DoubleLinkedList.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/nikitaromanov/Projects/LinkedList/DoubleLinkedList/DoubleLinkedList.csproj",
+        "projectName": "DoubleLinkedList",
+        "projectPath": "/Users/nikitaromanov/Projects/LinkedList/DoubleLinkedList/DoubleLinkedList.csproj",
+        "packagesPath": "/Users/nikitaromanov/.nuget/packages/",
+        "outputPath": "/Users/nikitaromanov/Projects/LinkedList/DoubleLinkedList/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/nikitaromanov/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "runtimeIdentifierGraphPath": "/Library/Frameworks/Mono.framework/Versions/6.12.0/lib/mono/msbuild/Current/bin/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 
 namespace LinkedList
 {
@@ -64,31 +65,36 @@ namespace LinkedList
         }
 
 
-
-
         //Метод добавления по индексу
         public void AddByIndex(int index, int value)
         {
-            if (index == 0)
+            if (index < 0 || index > Length)
             {
-                Node tmp = _root;
-                _root = new Node(value);
-                _root.Next = tmp;
+                throw new NullReferenceException();
             }
             else
             {
-                Node current = _root;
-                for (int i = 1; i < index; i++)
+                if (index == 0)
                 {
-                    current = current.Next;
+                    Node tmp = _root;
+                    _root = new Node(value);
+                    _root.Next = tmp;
                 }
+                else
+                {
+                    Node current = _root;
+                    for (int i = 1; i < index; i++)
+                    {
+                        current = current.Next;
+                    }
 
-                Node tmp = current.Next;
-                current.Next = new Node(value);
+                    Node tmp = current.Next;
+                    current.Next = new Node(value);
 
-                current.Next.Next = tmp;
+                    current.Next.Next = tmp;
+                }
+                Length++;
             }
-            Length++;
         }
 
         //Перегруженый Equals
@@ -196,22 +202,29 @@ namespace LinkedList
         //Метод удаленя элемента по индексу
         public void RemoveByIndex(int index)
         {
-            if (index == 0)
+            if( index < 0 || index > Length)
             {
-                Node tmp = _root;
-                _root = tmp.Next;
+                throw new NullReferenceException();
             }
             else
             {
-                Node current = _root;
-                for (int i = 1; i < index; i++)
+                if (index == 0)
                 {
-                    current = current.Next;
+                    Node tmp = _root;
+                    _root = tmp.Next;
                 }
+                else
+                {
+                    Node current = _root;
+                    for (int i = 1; i < index; i++)
+                    {
+                        current = current.Next;
+                    }
                 
-                current.Next = current.Next.Next;
+                    current.Next = current.Next.Next;
+                }
+                Length--;
             }
-            Length--;
         }
 
         //Метод возвращает длину
@@ -246,14 +259,22 @@ namespace LinkedList
         //Метод изменения по индексу
         public void ChangeIndex(int index, int value)
         {
-            Node current = _root;
-
-            for (int i = 0; i < index; i++)
+            if (index < 0 || index > Length)
             {
-                current = current.Next;
+                throw new NullReferenceException();
+            }
+            else
+            {
+                Node current = _root;
+
+                for (int i = 0; i < index; i++)
+                {
+                    current = current.Next;
+                }
+
+                current.Value = value; 
             }
 
-            current.Value = value; 
         }
 
         //Поиск наибольшего элемента
@@ -333,35 +354,47 @@ namespace LinkedList
         }
 
         //Cортировка по возрастанию
-        //public void SortLayout()
-        //{
-        //    if (Length == 0)
-        //    {
-        //        throw new Exception("List empty!");
-        //    }
-        //    else
-        //    {
-        //        Node current = _root;
-        //        Node temp = current.Next;
-        //        _root = temp;
+        public void SortLayout()
+        {
+            for (int i = 0; i < Length; i++)
+            {
+                Node current = _root;
+                for (int j = 1; j < Length - i; j++)
+                {
+                    if (current.Value > current.Next.Value)
+                    {
+                        int tmp = current.Next.Value;
+                        current.Next.Value = current.Value;
+                        current.Value = tmp;
+                    }
 
-        //        for (int i = 1; i < Length; i++)
-        //        {
-        //            if(current.Value < current.Next.Value)
-        //            {
-                        
-        //            }
-        //            current = current.Next;
-        //        }
-
-        //    }
-
-        //}
-
+                    current = current.Next;
+                }
+            }
+        }
+        
+        // Сортировка по убыванию
+        public void SortDecrease()
+        {
+            for (int i = 0; i < Length; i++)
+            {
+                Node current = _root;
+                for (int j = 1; j < Length - i; j++)
+                {
+                    if (current.Value < current.Next.Value)
+                    {
+                        int tmp = current.Next.Value;
+                        current.Next.Value = current.Value;
+                        current.Value = tmp;
+                    }
+                    current = current.Next;
+                }
+            }
+        }
 
         //Уделение по значению первого элемента
         public void RemoveItemFirstValue(int value, int quantity = 1)
-        {   
+        {
             for (int i = 0; i < quantity; i++)
             {
                 int index = GetIndexByValue(value);
@@ -407,39 +440,64 @@ namespace LinkedList
         //Добавление массива в конец
         public void AddArrayInEnd(int[] array)
         {
-            Node current = _root;
-            for (int i = 1; i < Length; i++)
+            if(array.Length == 0)
             {
-                current = current.Next;
+                throw new Exception("Array empty, Add items in array");
             }
-
-            for (int i = array.Length - 1; i >= 0; i--)
+            else
             {
-                Node tmp = current.Next;
-                current.Next = new Node(array[i]);
-                current.Next.Next = tmp;
-                Length++;
+                Node current = _root;
+                for (int i = 1; i < Length; i++)
+                {
+                    current = current.Next;
+                }
+
+                for (int i = array.Length - 1; i >= 0; i--)
+                {
+                    Node tmp = current.Next;
+                    current.Next = new Node(array[i]);
+                    current.Next.Next = tmp;
+                    Length++;
+                }
             }
         }
 
         //Добавление массива в начало
         public void AddArrayInFirst(int[] array)
         {
-            for (int i = array.Length - 1; i >= 0; i--)
+            if (array.Length == 0)
             {
-                Node tmp = _root;
-                _root = new Node(array[i]);
-                _root.Next = tmp;
-                Length++;
+                throw new Exception("Array empty, Add items in array");
+            }
+            else
+            {
+                for (int i = array.Length - 1; i >= 0; i--)
+                {
+                    Node tmp = _root;
+                    _root = new Node(array[i]);
+                    _root.Next = tmp;
+                    Length++;
+                }
             }
         }
 
         //Добавление массива по индексу
         public void AddArrayByIndex(int[] array, int index)
         {
-            for (int i = array.Length - 1; i >= 0; i--)
+            if (array.Length == 0)
             {
-                AddByIndex(index, array[i]);
+                throw new Exception("Array empty, Add items in array");
+            }
+            else if (index < 0 || index > Length)
+            {
+                throw new NullReferenceException();
+            }
+            else
+            {
+                for (int i = array.Length - 1; i >= 0; i--)
+                {
+                    AddByIndex(index, array[i]);
+                }
             }
         }
 
@@ -470,7 +528,6 @@ namespace LinkedList
             }
         }
 
-
         //Количестно повторяющихся элементов в списке
         private int QuantityAgainItem(int value)
         {
@@ -488,8 +545,40 @@ namespace LinkedList
             return quantity;
         }
 
-        //Перемещение по списку вперед
-
-
+        //сортировка листа через преобразование массива
+        //  public LinkedList SortList(LinkedList list)
+        //  {
+        //      Node current = _root;
+        //
+        //      if (Length > 1)
+        //      {
+        //          int[] array = new int[Length];
+        //          while (current != null)
+        //          {
+        //              for (int i = 0; i < array.Length; i++)
+        //              {
+        //                  array[i] = current.Value;
+        //              }
+        //              current = current.Next;
+        //          }
+        //          
+        //          for (int i = 0; i < Length; i++)
+        //          {
+        //              for (int j = 0; j < Length - 1; j++)
+        //              {
+        //                  if (array[j] > array[j + 1])
+        //                  {
+        //                      int item = array[j + 1];
+        //                      array[j + 1] = array[j];
+        //                      array[j] = item;
+        //                  }
+        //              }
+        //          }
+        //          LinkedList listArr = new LinkedList(array);
+        //          return listArr;
+        //      }
+        // }
+        
+        // для двусвязного списака GetNodeByIndex;
     }
 }

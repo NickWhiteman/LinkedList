@@ -1,7 +1,8 @@
 ﻿<Properties StartupConfiguration="{323F89CE-3480-427F-A140-3C7961A13438}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="LinkedList/LinkedList.cs">
     <Files>
-      <File FileName="LinkedList/LinkedList.cs" Line="360" Column="1" />
+      <File FileName="LinkedList/LinkedList.cs" Line="364" Column="17" />
+      <File FileName="LinkedList.Test/LinkedListTest.cs" Line="517" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,9 +18,9 @@
       </Pad>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
-          <Node name="LinkedList" expanded="True">
+          <Node name="LinkedList" expanded="True" selected="True">
             <Node name="LinkedList.Test" expanded="True">
-              <Node name="LinkedList.Test" expanded="True" selected="True">
+              <Node name="LinkedList.Test" expanded="True">
                 <Node name="Tests" expanded="True" />
               </Node>
             </Node>

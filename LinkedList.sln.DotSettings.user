@@ -1,0 +1,6 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b8d9c5b6_002D807f_002D4742_002D870e_002D6c7c0b3f1661/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="SortLayout([2, 3, 1],[1, 2, 3])" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::323F89CE-3480-427F-A140-3C7961A13438::.NETCoreApp,Version=v5.0::LinkedList.Test.Tests.SortDecrease&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

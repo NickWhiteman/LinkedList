@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "lAHTNJdL9aGI/RFt3KzIu3+HrTsTpfGi4IJE+F2HpRh2/RTipqQ9Zl9eK2pAJ3BH3BMIZ6Uj5+RNgaoqAEK8kA==",
+  "dgSpecHash": "4a3lPilLGeppPFsKgEybzDNXqTAcdxZ8VDVfbWOEfseFxHuF0xKayzVcQ8F82IFNGBB40/1BUt4lYlabsBFg5g==",
   "success": true,
   "projectFilePath": "/Users/nikitaromanov/Projects/LinkedList/LinkedList.Test/LinkedList.Test.csproj",
   "expectedPackageFiles": [

@@ -214,22 +214,38 @@ namespace LinkedList.Test
         //}
 
 
-        //[TestCase(new int[] { 2, 3, 1 }, new int[] { 1, 2, 3 })]
-        //[TestCase(new int[] { 2, 6, 1, 5, 0 }, new int[] { 0, 1, 2, 5, 6 })]
-        //[TestCase(new int[] { 1, 43, 99, 35, 23 }, new int[] { 1, 23, 35, 43, 99 })]
-        //[TestCase(new int[] { 23, -12, -84, 34, 54 }, new int[] { -84, -12, 23, 34, 54 })]
-        //[TestCase(new int[] { -23, -12, -45, -1, 0 }, new int[] { -45, -23, -12, -1, 0 })]
-        //public void SortLayout(int[] array, int[] expArr)
-        //{
-        //    LinkedList expected = new LinkedList(expArr);
-        //    LinkedList actual = new LinkedList(array);
+        // [TestCase(new int[] { 2, 3, 1 }, new int[] { 1, 2, 3 })]
+        // [TestCase(new int[] { 2, 6, 1, 5, 0 }, new int[] { 0, 1, 2, 5, 6 })]
+        // [TestCase(new int[] { 1, 43, 99, 35, 23 }, new int[] { 1, 23, 35, 43, 99 })]
+        // [TestCase(new int[] { 23, -12, -84, 34, 54 }, new int[] { -84, -12, 23, 34, 54 })]
+        // [TestCase(new int[] { -23, -12, -45, -1, 0 }, new int[] { -45, -23, -12, -1, 0 })]
+        // public void SortLayout(int[] array, int[] expArr)
+        // {
+        //     LinkedList expected = new LinkedList(expArr);
+        //     LinkedList actual = new LinkedList(array);
+        //
+        //     actual.SortLayout();
+        //
+        //     Assert.AreEqual(expected, actual);
+        // }
 
-        //    actual.SortLayout();
 
-        //    Assert.AreEqual(expected, actual);
-        //}
-
-
+        // [TestCase(new int[] { 2, 3, 1 }, new int[] { 3, 2, 1 })]
+        // [TestCase(new int[] { 2, 6, 1, 5, 0 }, new int[] { 6, 5, 2, 1, 0 })]
+        // [TestCase(new int[] { 1, 43, 99, 35, 23 }, new int[] { 99, 43, 35, 23, 1 })]
+        // [TestCase(new int[] { 23, -12, -84, 34, 54 }, new int[] { 54, 34, 23, -12, -84 })]
+        // [TestCase(new int[] { -23, -12, -45, -1, 0 }, new int[] { 0, -1, -12, -23, -45 })]
+        // public void SortDecrease(int[] array, int[] expArr)
+        // {
+        //     LinkedList expected = new LinkedList(expArr);
+        //     LinkedList actual = new LinkedList(array);
+        //
+        //     actual.SortDecrease();
+        //
+        //     Assert.AreEqual(expected, actual);
+        // }
+        
+        
         //[TestCase(new int[] { 1, 2, 3 }, 2, new int[] { 1, 3 })]
         //[TestCase(new int[] { 2, 6, 1, 5, 0 }, 5, new int[] { 2, 6, 1, 0 })]
         //[TestCase(new int[] { 1, 43, 35, 99, 23 }, 99, new int[] { 1, 43, 35, 23 })]
@@ -390,6 +406,130 @@ namespace LinkedList.Test
 
         //    Assert.AreEqual(expected, actual);
         //}
+
+
+
+        //[TestCase(new int[] { 1, 2, 3 }, 5, 1 )]
+        //[TestCase(new int[] { 2, 6, 1, 6, 0 }, -1, 2 )]
+        //public void AddByIndex(int[] array , int index, int value)
+        //{
+        //    try
+        //    {
+        //        LinkedList actual = new LinkedList(array);
+        //        actual.AddByIndex(index, value);
+        //    }
+        //    catch 
+        //    {
+        //        Assert.Pass();
+        //    }
+        //    Assert.Fail();
+        //}
+
+
+        //[TestCase(new int[] { 1, 2, 3 }, 5, 1)]
+        //[TestCase(new int[] { 2, 6, 1, 6, 0 }, -1, 2)]
+        //public void AddByIndexNegative(int[] array, int index, int value)
+        //{
+        //    try
+        //    {
+        //        LinkedList actual = new LinkedList(array);
+        //        actual.AddByIndex(index, value);
+        //    }
+        //    catch
+        //    {
+        //        Assert.Pass();
+        //    }
+        //    Assert.Fail();
+        //}
+
+
+
+        //[TestCase(new int[] { 1, 2, 3 }, 5)]
+        //[TestCase(new int[] { 2, 6, 1, 6, 0 }, -1)]
+        //public void RemoveByIndexNegative(int[] array, int index)
+        //{
+        //    try
+        //    {
+        //        LinkedList actual = new LinkedList(array);
+        //        actual.RemoveByIndex(index);
+        //    }
+        //    catch
+        //    {
+        //        Assert.Pass();
+        //    }
+        //    Assert.Fail();
+        //}
+
+
+
+        //[TestCase(new int[] { 1, 2, 3 }, 5, 2)]
+        //[TestCase(new int[] { 2, 6, 1, 6, 0 }, -1, 8)]
+        //public void ChangeIndexNegative(int[] array, int index, int value)
+        //{
+        //    try
+        //    {
+        //        LinkedList actual = new LinkedList(array);
+        //        actual.ChangeIndex(index, value);
+        //    }
+        //    catch
+        //    {
+        //        Assert.Pass();
+        //    }
+        //    Assert.Fail();
+        //}
+
+
+        //[TestCase(new int[] { 1, 2, 3 }, new int[0] { })]
+        //public void AddArrayInEndNegative(int[] array, int[] arr)
+        //{
+        //    try
+        //    {
+        //        LinkedList actual = new LinkedList(array);
+        //        actual.AddArrayInEnd(arr);
+        //    }
+        //    catch
+        //    {
+        //        Assert.Pass();
+        //    }
+        //    Assert.Fail();
+        //}
+
+
+        //[TestCase(new int[] { 1, 2, 3 }, new int[0] { })]
+        //public void AddArrayInFirstNegative(int[] array, int[] arr)
+        //{
+        //    try
+        //    {
+        //        LinkedList actual = new LinkedList(array);
+        //        actual.AddArrayInFirst(arr);
+        //    }
+        //    catch
+        //    {
+        //        Assert.Pass();
+        //    }
+        //    Assert.Fail();
+        //}
+
+
+
+
+        //[TestCase(new int[] { 1, 2, 3 }, new int[] { 3, 2, 1}, -1)]
+        //[TestCase(new int[] { 1, 2, 3 }, new int[] { 3, 2, 1 }, 4)]
+        //public void AddArrayByIndexNegative(int[] array, int[] arr, int index)
+        //{
+        //    try
+        //    {
+        //        LinkedList actual = new LinkedList(array);
+        //        actual.AddArrayByIndex(arr, index);
+        //    }
+        //    catch
+        //    {
+        //        Assert.Pass();
+        //    }
+        //    Assert.Fail();
+        //}
+
+
 
     }
 }
