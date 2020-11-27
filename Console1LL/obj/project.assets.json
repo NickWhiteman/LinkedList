@@ -39,7 +39,7 @@
       "outputPath": "/Users/nikitaromanov/Projects/LinkedList/Console1LL/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/nikitaromanov/.nuget/NuGet/NuGet.Config"
+        "/Users/nikitaromanov/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"

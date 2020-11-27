@@ -320,14 +320,14 @@ namespace LinkedList
             int maxItem = current.Value;
             int maxIndex = 0;
 
-            for (int i = 1; i < Length; i++)
+            for (int i = 0; i < Length; i++)
             {
-                current = current.Next;
                 if (current.Value > maxItem)
                 {
                     maxItem = current.Value;
                     maxIndex = i;
                 }
+                current = current.Next;
             }
 
             return maxIndex;
@@ -340,14 +340,14 @@ namespace LinkedList
             int minItem = current.Value;
             int minIndex = 0;
 
-            for (int i = 1; i <= Length; i++)
+            for (int i = 0; i < Length; i++)
             {
-                current = current.Next;
                 if (current.Value < minItem)
                 {
                     minItem = current.Value;
                     minIndex = i;
                 }    
+                current = current.Next;
             }
 
             return minIndex;
